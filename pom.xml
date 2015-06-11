@@ -22,8 +22,8 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
-		<pluginRepository> 
-			<id>maven-net-cn</id> 
+		<pluginRepository>
+			<id>maven-net-cn</id>
 			<name>Maven China Mirror</name>
 			<url>http://repo1.maven.org/maven2</url>
 			<releases>
@@ -41,6 +41,11 @@
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${springframework-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -67,7 +72,7 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate-version}</version>
-		</dependency> 
+		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -93,7 +98,7 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>
 			<version>2.1</version>
-			<exclusions> 
+			<exclusions>
 				<exclusion>
 					<artifactId>commons-logging</artifactId>
 					<groupId>commons-logging</groupId>
@@ -104,6 +109,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>commons-logging</groupId>
@@ -138,15 +144,37 @@
 			<version>1.7.12</version>
 		</dependency>
 		<dependency>
-			<groupId>net.sf.json-lib</groupId>
-			<artifactId>json-lib</artifactId>
-			<version>2.4</version>
-			<classifier>jdk15</classifier>
-		</dependency>
-		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>1.0.14</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+			<classifier>site</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.2.0</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.tuckey</groupId>
+		    <artifactId>urlrewritefilter</artifactId>
+		    <version>4.0.3</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -170,6 +198,14 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+<!-- 			<plugin> -->
+<!--                 <groupId>org.apache.tomcat.maven</groupId> -->
+<!--                 <artifactId>tomcat7-maven-plugin</artifactId> -->
+<!--                 <version>2.1</version> -->
+<!--                 <configuration> -->
+<!--                     <port>8088</port> -->
+<!--                 </configuration> -->
+<!--             </plugin> -->
 		</plugins>
 		<defaultGoal>compile</defaultGoal>
 	</build>
