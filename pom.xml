@@ -10,9 +10,9 @@
 
 	<repositories>
 		<repository>
-			<id>maven-net-cn</id>
-			<name>Maven China Mirror</name>
-			<url>http://repo1.maven.org/maven2</url>
+			<id>maven-local</id>
+			<name>local Maven</name>
+			<url>http://10.214.8.172:8099/artifactory/libs-release/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -20,12 +20,23 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<!-- <repository> -->
+		<!-- <id>maven-net-cn</id> -->
+		<!-- <name>Maven China Mirror</name> -->
+		<!-- <url>http://repo1.maven.org/maven2</url> -->
+		<!-- <releases> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </releases> -->
+		<!-- <snapshots> -->
+		<!-- <enabled>false</enabled> -->
+		<!-- </snapshots> -->
+		<!-- </repository> -->
 	</repositories>
-	<pluginRepositories>
+	<pluginRepositories> 
 		<pluginRepository>
-			<id>maven-net-cn</id>
-			<name>Maven China Mirror</name>
-			<url>http://repo1.maven.org/maven2</url>
+			<id>maven-local</id>
+			<name>local Maven</name>
+			<url>http://10.214.8.172:8099/artifactory/libs-release/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -33,6 +44,17 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
+		<!-- <pluginRepository> -->
+		<!-- <id>maven-net-cn</id> -->
+		<!-- <name>Maven China Mirror</name> -->
+		<!-- <url>http://repo1.maven.org/maven2</url> -->
+		<!-- <releases> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </releases> -->
+		<!-- <snapshots> -->
+		<!-- <enabled>false</enabled> -->
+		<!-- </snapshots> -->
+		<!-- </pluginRepository> -->
 	</pluginRepositories>
 
 	<dependencies>
@@ -142,6 +164,12 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.12</version>
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<artifactId>log4j</artifactId> -->
+<!-- 					<groupId>log4j</groupId> -->
+<!-- 				</exclusion> -->
+<!-- 			</exclusions> -->
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -172,10 +200,16 @@
 			<version>2.2.3</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.tuckey</groupId>
-		    <artifactId>urlrewritefilter</artifactId>
-		    <version>4.0.3</version>
+			<groupId>org.tuckey</groupId>
+			<artifactId>urlrewritefilter</artifactId>
+			<version>4.0.3</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>1.7.12</version>
+		</dependency>
+ 
 	</dependencies>
 	<build>
 		<finalName>DataIntegrationPlatform</finalName>
@@ -198,14 +232,15 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-<!-- 			<plugin> -->
-<!--                 <groupId>org.apache.tomcat.maven</groupId> -->
-<!--                 <artifactId>tomcat7-maven-plugin</artifactId> -->
-<!--                 <version>2.1</version> -->
-<!--                 <configuration> -->
-<!--                     <port>8088</port> -->
-<!--                 </configuration> -->
-<!--             </plugin> -->
+			<!-- <plugin> -->
+			<!-- <groupId>org.apache.tomcat.maven</groupId> -->
+			<!-- <artifactId>tomcat7-maven-plugin</artifactId> -->
+			<!-- <version>2.1</version> -->
+			<!-- <configuration> -->
+			<!-- <port>8088</port> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
+		
 		</plugins>
 		<defaultGoal>compile</defaultGoal>
 	</build>
