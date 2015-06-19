@@ -40,12 +40,11 @@
 				</div><!-- /.sidebar-shortcuts -->
 
 				<ul class="nav nav-list">
-					<li class="active">
+					<li id="index" class="active">
 						<a href="index.html">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> 数据集成平台  </span>
 						</a>
-
 						<b class="arrow"></b>
 					</li>
 					<!--  同步接口 ===start -->
@@ -66,21 +65,21 @@
 								<b class="arrow"></b>
 								<ul class="submenu">
 									<li class="">
-										<li class="">
+										<li id="sync/business/list" class="">
 											<a href="<%=basePath %>sync/business/list">
 												<i class="menu-icon fa "></i>
 												业务系统注册
 											</a>
 											<b class="arrow"></b>
 										</li>
-										<li class="">
+										<li id="sync/interface/list" class="">
 											<a href="<%=basePath %>sync/interface/list">
 												<i class="menu-icon fa "></i>
 												接口注册
 											</a>
 										<b class="arrow"></b>
 										</li>
-										<li class="">
+										<li id="sync/interfaceset/list" class="">
 											<a href="<%=basePath %>sync/interfaceset/list">
 												<i class="menu-icon fa  "></i>
 												接口设置
@@ -586,7 +585,6 @@
 									<i class="menu-icon fa fa-caret-right"></i>
 									Blank Page
 								</a>
-
 								<b class="arrow"></b>
 							</li>
 						</ul>
@@ -605,8 +603,6 @@
 				</script>
 			</div>
 	<!-- /section:basics/sidebar -->
-<script type="text/javascript">
-	
 
-</script>	
+
 

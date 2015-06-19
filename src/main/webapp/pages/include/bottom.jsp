@@ -287,3 +287,20 @@
 		<script src="<%=basePath%>static/docs/assets/js/language/html.js"></script>
 		<script src="<%=basePath%>static/docs/assets/js/language/css.js"></script>
 		<script src="<%=basePath%>static/docs/assets/js/language/javascript.js"></script>
+		<script src="<%=basePath%>static/docs/assets/js/language/javascript.js"></script>
+				
+	<script type="text/javascript">
+			var locationURL = document.location.href;
+			
+			$("#sidebar li").each(function(){
+				var me = this;
+				if(locationURL.indexOf(me.id)>0){
+					$("#index").removeClass("active open")
+					$(me).addClass("active");
+					$(me).parents("li").addClass("active open");
+					return false;
+				}
+			
+			});
+	</script>	
+		
