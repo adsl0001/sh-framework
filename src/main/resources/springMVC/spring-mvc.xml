@@ -53,5 +53,7 @@
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
 	</bean>
-	<mvc:resources mapping="/static/**" location="/static/" />
+	<mvc:resources mapping="/static/**" location="/pages/static/" />
+<!-- 	<mvc:resources mapping="/static/assets/**" location="/pages/static/assets/" /> -->
+	
 </beans>

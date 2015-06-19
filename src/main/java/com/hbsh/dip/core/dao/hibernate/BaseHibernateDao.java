@@ -4,10 +4,13 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
@@ -22,7 +25,10 @@ import com.hbsh.dip.core.entity.BaseEntity;
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public class BaseHibernateDao extends HibernateDaoSupport implements
 		IHibernateEntityDao {
-
+	@Resource
+	public void setSessionFacotry(SessionFactory sessionFacotry) {
+		super.setSessionFactory(sessionFacotry);
+	}
 	public void save(BaseEntity entity) {
 		getHibernateTemplate().save(entity);
 	}

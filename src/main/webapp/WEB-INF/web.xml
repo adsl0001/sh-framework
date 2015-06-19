@@ -70,7 +70,7 @@
 	<!-- Spring MVC 的注册 -->
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>DruidStatView</servlet-name>
